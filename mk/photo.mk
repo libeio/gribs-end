@@ -1,0 +1,3 @@
+
+SERVICENAME = photo
+CONFMT = .yaml
