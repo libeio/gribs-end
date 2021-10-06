@@ -14,6 +14,7 @@ deps:
 
 	@$(GO-GET) github.com/go-pg/pg/v10@v10.9.0
 	@$(GO-GET) github.com/spf13/viper@v1.9.0
+	@$(GO-GET) github.com/gin-gonic/gin@v1.7.2
 
 clean:
 	$(MAKE) -C suites clean

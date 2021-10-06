@@ -1,0 +1,14 @@
+{{define "body"}}
+
+    <div class="content">
+        {{range .}}
+        <div>
+            <a href="{{.Href}}" target="_blank">
+                <img src="{{.Src}}"/>
+            </a>
+            <p>{{.Description}}</p>
+        </div>
+        {{end}}
+    </div>
+
+{{end}}

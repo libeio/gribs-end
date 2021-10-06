@@ -1,0 +1,20 @@
+{{define "photo"}}
+
+<!doctype html>
+<head>
+    {{template "head" .Head}}
+</head>
+<body>
+    <header>
+        {{template "header" .Header}}
+    </header>
+    <nav>
+        {{template "nav" .Nav}}
+    </nav>
+
+    {{template "body" .Body}}
+
+    <footer>{{template "footer" .Footer}}</footer>
+</body>
+
+{{end}}

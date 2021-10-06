@@ -1,6 +1,53 @@
-
+# 数据库
 postgresql:
   addr: "127.0.0.1:5432"
   user: "pguser"
   password: ""
   dbname: "webdb"
+
+# 配置前端资源
+frontend:
+  staticStylePath: "/home/github/grids/styles"
+  staticStyleFiles:
+    - "/styles/csshake.css"
+    - "/styles/hi.css"
+  staticScriptPath: "/home/github/grids/scripts"
+  staticScriptFiles:
+    - "/scripts/mtsys.js"
+
+# 配置后端资源
+backend:
+  tmplPath: "/home/github/grids-end/tmpl/*"
+
+# 配置其他资源
+resource:
+  footerText: "©Yo-Gi-Oh Card 游ICP备12345678号"  
+
+# 服务配置
+suites:
+  photo:
+    href: "https://www.ourocg.cn/advance"
+    text: "图片组"
+  cardpkg:
+    href: "https://www.ourocg.cn/package"
+    text: "卡包"
+  help:
+    href: "https://www.ourocg.cn/pages/manual"
+    text: "帮助"
+  rule:
+    href: "bbs.newwise.com/thread-907107-1-1.html"
+    text: "规则"
+  monster:
+    href: "https://www.ourocg.cn/card/list-1/1"
+    text: "全部怪兽"
+  magics:
+    href: "https://www.ourocg.cn/card/list-2/1"
+    text: "全部魔陷"
+  limits:
+    href: "https://www.ourocg.cn/Limit-Latest"
+    text: "禁限卡表"
+
+# photo
+photo:
+  listImgPath: "/home/github/grids-rc/img"
+  headerImgSrc: "/img/yo-gi-oh.jpg"

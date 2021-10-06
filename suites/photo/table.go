@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	_seq_tbl_img_show = "CREATE SEQUENCE IF NOT EXISTS tbl_photo_show_id_seq START WITH 1;"
+	_seq_tbl_photo_show = "CREATE SEQUENCE IF NOT EXISTS tbl_photo_show_id_seq START WITH 1;"
 )
 
 type TblPhotoShow struct {
@@ -22,13 +22,14 @@ type TblPhotoShow struct {
 	Groups		[]string		`pg:"type:varchar(32)[],array"`						// 组，除适用角色用户外，也适用于指定的组
     Additional	[]string		`pg:"type:varchar(32)[],array"`                     // 额外，除适用于角色和组用户外，也适用于某些个体
     Excluded    []string        `pg:"type:varchar(32)[],array"`                     // 指定用户不适用于该资源
-
+    
     Sorted      int32           `pg:"type:integer,notnull"`							// 页面排序用
 	Tag         []string        `pg:"type:varchar(16)[],array"`						// 页面过滤搜索用
-
+	// 后续将这里加一张切片作为表，应该也不需要，加个表名就行了
     Href        string          `pg:"type:text,notnull"`
     Src         string          `pg:"type:text,notnull"`
-    Description string          `pg:"type:text"`
+	Description string          `pg:"type:text"`
+	// 添加一张真实资源表
 
     CreateTime  time.Time       `pg:"type:timestamp,notnull,default:now()::timestamp"`
     UpdateTime  time.Time       `pg:"type:timestamp,notnull,default:now()::timestamp"`
@@ -53,7 +54,7 @@ func InitDB() {
 	for _, model := range _models {
 		switch model.(type) {
 		case *TblPhotoShow:
-			_, err := db.Exec(_seq_tbl_img_show)
+			_, err := db.Exec(_seq_tbl_photo_show)
 			if err != nil {
 				log.Panicln(err)
 			}
