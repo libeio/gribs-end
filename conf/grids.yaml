@@ -7,17 +7,17 @@ postgresql:
 
 # 配置前端资源
 frontend:
-  staticStylePath: "/home/github/grids/styles"
+  staticStylePath: "/home/grids/grids-web/styles"
   staticStyleFiles:
     - "/styles/csshake.css"
     - "/styles/hi.css"
-  staticScriptPath: "/home/github/grids/scripts"
+  staticScriptPath: "/home/grids/grids-web/scripts"
   staticScriptFiles:
     - "/scripts/mtsys.js"
 
 # 配置后端资源
 backend:
-  tmplPath: "/home/github/grids-end/tmpl/*"
+  tmplPath: "/home/grids/grids-end/tmpl/*"
 
 # 配置其他资源
 resource:
@@ -49,5 +49,5 @@ suites:
 
 # photo
 photo:
-  listImgPath: "/home/github/grids-rc/img"
+  listImgPath: "/home/grids/grids-rcs/img"
   headerImgSrc: "/img/yo-gi-oh.jpg"
