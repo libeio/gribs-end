@@ -10,7 +10,7 @@ frontend:
   staticStylePath: "/home/grids/grids-web/styles"
   staticStyleFiles:
     - "/styles/csshake.css"
-    - "/styles/hi.css"
+    - "/styles/layout.css"
   staticScriptPath: "/home/grids/grids-web/scripts"
   staticScriptFiles:
     - "/scripts/mtsys.js"
