@@ -28,10 +28,6 @@ func init() {
     InitPage()
 }
 
-func tHandler(w http.ResponseWriter, r *http.Request) {
-    mainPage.ExecuteTemplate(w, "photo", data)
-}
-
 func main() {
 	router := gin.Default()
 

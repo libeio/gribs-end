@@ -2,19 +2,39 @@
 
 <!doctype html>
 <head>
-    {{template "head" .Head}}
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Head.Title}}</title>
+    {{range .Head.Styles}}
+    <link rel="stylesheet" href="{{.}}" type="text/css">
+    {{end}}
+    {{range .Head.Scripts}}
+    <script src="{{.}}" type="text/javascript" charset="utf-8"></script>
+    {{end}}
 </head>
 <body>
     <header>
-        {{template "header" .Header}}
+        <img src="{{.Header.ImgSrc}}">
     </header>
     <nav>
-        {{template "nav" .Nav}}
+        <ul>
+            {{range .Nav.Lists}}
+            <li class="shake shake-little"><a href="{{.Href}}" target="_blank">{{.Text}}</a></li>
+            {{end}}
+        </ul>
     </nav>
-
-    {{template "body" .Body}}
-
-    <footer>{{template "footer" .Footer}}</footer>
+    <div class="content">
+        {{range .Body}}
+        <div>
+            <a href="{{.Href}}" target="_blank">
+                <img src="{{.Src}}"/>
+            </a>
+            <p>{{.Description}}</p>
+        </div>
+        {{end}}
+    </div>
+    <footer>{{.Footer.Text}}</footer>
 </body>
 
 {{end}}
